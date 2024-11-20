@@ -35,7 +35,7 @@
 
 .controls {
   float: left;
-  width: 35%;
+  width: 30%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
@@ -44,7 +44,7 @@
 
 .header-message {
   float: right;
-  width: 65%;
+  width: 70%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -74,12 +74,11 @@
 /*  PICTURE *******************/
 
 .center {
-  width: 40%;
+  max-width: 70%;
+  max-height: 80vh;
   height: auto;
   cursor: default;
   margin: 20px;
-  filter: drop-shadow(0px 0px 5px #40e0d0);
-  border: 1px solid white;
   position: relative;
 }
 .arrows:hover {
@@ -92,32 +91,6 @@
 }
 
 
-/* Trip article header */
-.article-header {
-  width: 100%;
-  color: white;
-  height: 100%;
-  text-align: center;
-}
-.article-header h2 {
-  font-size: 2.25em;
-  margin-top: 50px;
-}
-.article-header h3 {
-  font-size: 1.75em;
-}
-.colored-subheading {
-  color: #e48c7a;
-}
-.trip-link {
-  width: 100%;
-  text-align: center;
-  color: white;
-  margin: 20px 0;
-}
-.trip-link a {
-  color: lightblue !important;
-}
 /* Container, article and header for all articles */
 
 .container {
@@ -141,6 +114,11 @@
   color: white;
   width: 100%;
   text-align: center;
+  padding: 5%;
+  box-sizing: border-box;
+}
+.article p {
+  font-size: 1.5em;
 }
 
 .ImageArticle {
@@ -152,6 +130,36 @@
   justify-content: center;
   align-items: center;
   flex-flow: column;
+}
+
+/* Trip article header */
+.article-header {
+  width: 100%;
+  color: white;
+  height: 100%;
+  text-align: center;
+}
+.article-header h2 {
+  font-size: 2.25em;
+  margin-top: 50px;
+}
+.article-header h3 {
+  font-size: 1.75em;
+}
+.colored-text {
+  color: #e48c7a;
+}
+.colored-subheading {
+  color: #9ce47a;
+}
+.trip-link {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin: 20px 0;
+}
+.trip-link a {
+  color: lightblue !important;
 }
 
 /* video *************************************************/
@@ -199,30 +207,18 @@ iframe {
 
 @media (max-width: 800px) and (orientation: portrait) {
   .Header {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   .trackInfo {
     width: 25%;
   }
-  .ImageArticle {
-    flex-flow: column;
-  }
   h1 {
     font-size: 2em;
   }
-  .arrows {
-    transform: rotate(90deg);
-    width: 50px;
-    height: 50px;
-  }
-  .arrows:hover {
-    transform: rotate(90deg);
-  }
-  .center {
-    width: 70%;
-    height: auto;
-  }
   .header > div:nth-child(2) > h1 {
+    font-size: 1.2em;
+  }
+  .article p {
     font-size: 1.2em;
   }
 }

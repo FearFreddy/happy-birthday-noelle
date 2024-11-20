@@ -11,9 +11,9 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentMode: '||',
+      currentMode: '►',
       songIndex: 0,
-      infoStatus: 'trackInfo',
+      infoStatus: 'trackInfo hidden',
     };
 
     this.audioRef = createRef();
@@ -24,7 +24,7 @@ class Header extends Component {
       this.audioRef.current.src = songList[this.state.songIndex].url;
       this.audioRef.current.load();
       this.audioRef.current.addEventListener('loadeddata', () => {
-        this.audioRef.current.play();
+        // this.audioRef.current.play();
         this.audioRef.current.volume = 0.5;
       });
       this.audioRef.current.addEventListener(
@@ -35,12 +35,6 @@ class Header extends Component {
         false,
       );
     }
-
-    infoTimeout = setTimeout(() => {
-      this.setState({
-        infoStatus: 'trackInfo hidden',
-      });
-    }, 5000);
   }
 
   componentWillUnmount() {
@@ -85,7 +79,12 @@ class Header extends Component {
     switch (this.state.currentMode) {
       case '►':
         this.audioRef.current.play();
-        this.setState({ currentMode: '||' });
+        this.setState({ infoStatus: 'trackInfo', currentMode: '||' });
+        infoTimeout = setTimeout(() => {
+          this.setState({
+            infoStatus: 'trackInfo hidden',
+          });
+        }, 5000);
         break;
       case '||':
         this.audioRef.current.pause();

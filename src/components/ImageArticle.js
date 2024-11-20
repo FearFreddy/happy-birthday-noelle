@@ -78,7 +78,7 @@ class ImageArticle extends Component {
     return (
       <div className="container">
         <div className="article-header">
-          <h2>Pictures</h2>
+          <h2>Ein paar Erinnerungen aus 2024 ❤️</h2>
         </div>
         <div className="article ImageArticle">
           <img
