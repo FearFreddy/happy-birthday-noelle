@@ -1,0 +1,32 @@
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: "Nunito", cursive, Arial, Helvetica, sans-serif;
+  background-color: #222223;
+}
+
+/* App & general stuff */
+
+.App {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  color: #40e0d0;
+  padding: 0;
+  padding-top: 4vh;
+  padding-bottom: 2vh;
+  margin: 0;
+  font-size: 3em;
+}

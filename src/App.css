@@ -1,0 +1,243 @@
+/* Header (MusicPlayer)  ***********************************/
+
+/* React Component */
+.Header {
+  margin: 0;
+  height: 60px;
+  background-color: black;
+  font-size: 1.5em;
+  position: fixed;
+  color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.95;
+  z-index: 20;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+}
+
+.Header button {
+  outline: 0;
+  background-color: black;
+  border: none;
+  color: white;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 0.8em;
+  width: 50px;
+  height: 80%;
+}
+
+.Header button:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.controls {
+  float: left;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-message {
+  float: right;
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.trackInfo {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  background-color: black;
+  height: auto;
+  animation: moveIn 0.5s ease-out;
+}
+
+.hidden {
+  animation: moveOut 0.5s ease-in forwards !important;
+}
+
+/*  PICTURE *******************/
+
+.center {
+  width: 40%;
+  height: auto;
+  cursor: default;
+  margin: 20px;
+  filter: drop-shadow(0px 0px 5px #40e0d0);
+  border: 1px solid white;
+  position: relative;
+}
+.arrows:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.show {
+  filter: blur(70px);
+  animation: show 0.5s linear;
+}
+
+
+/* Trip article header */
+.article-header {
+  width: 100%;
+  color: white;
+  height: 100%;
+  text-align: center;
+}
+.article-header h2 {
+  font-size: 2.25em;
+  margin-top: 50px;
+}
+.article-header h3 {
+  font-size: 1.75em;
+}
+.colored-subheading {
+  color: #e48c7a;
+}
+.trip-link {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin: 20px 0;
+}
+.trip-link a {
+  color: lightblue !important;
+}
+/* Container, article and header for all articles */
+
+.container {
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 50px;
+  z-index: 1;
+  border-bottom: 1px solid #e48c7a;
+}
+
+.article {
+  z-index: 10;
+  display: flex;
+  min-height: calc(85vh - 50px);
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.ImageArticle {
+  flex-flow: row;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+/* video *************************************************/
+
+video {
+  width: 60vw;
+  height: auto;
+  margin: 20px;
+}
+
+iframe {
+  margin-top: 20px;
+  width: 80vw;
+  height: 60vh;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveIn {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes moveOut {
+  from {
+    left: 0;
+  }
+  to {
+    left: -500px;
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) and (orientation: portrait) {
+  .Header {
+    font-size: 1.2em;
+  }
+  .trackInfo {
+    width: 25%;
+  }
+  .ImageArticle {
+    flex-flow: column;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .arrows {
+    transform: rotate(90deg);
+    width: 50px;
+    height: 50px;
+  }
+  .arrows:hover {
+    transform: rotate(90deg);
+  }
+  .center {
+    width: 70%;
+    height: auto;
+  }
+  .header > div:nth-child(2) > h1 {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+  .Header {
+    font-size: 1.2em;
+  }
+  .trackInfo {
+    width: 30%;
+  }
+  .ImageArticle {
+    flex-flow: row;
+  }
+  h1 {
+    font-size: 2.2em;
+  }
+}
